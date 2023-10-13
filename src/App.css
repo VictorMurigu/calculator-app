@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root{
+  --white:white;
+  --light-gray:#f0f0f0;
+  --dark-gray:#6c6c6c;
+  --black:black;
+  --yellow:yellow;   
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#calculator{
+  display: grid;
+  grid-template-areas: "display display display display"
+  "clear negative  percentage divide"
+  "seven eight nine multiply"
+  "four five six subtract"
+  "one two three add"
+  "zero zero decimal equals ";
+  gap:20px;
+  margin-top:20px;
+  padding-top:10px;
+  background-color: var(--black);
+}
+.light-gray{
+  background-color: var(--light-gray);
+}
+.dark-gray{
+  background-attachment: var(--dark-gray);
+}
+.yellow{
+  background-color: var(--yellow) ;
+}
+#answer{
+  font-size:48px;
+  height:48px;
+  color:white;
+}
+#expression{
+  font-size: 30px;
+  height:38px;
+  color:var(--dark-gray)
+}
+#display{
+  grid-area: display ;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#clear {
+  grid-area: clear;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#negative {
+  grid-area: negative;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#percentage {
+  grid-area: percentage;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#divide {
+  grid-area: divide;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#seven {
+  grid-area: seven;
 }
-
-.card {
-  padding: 2em;
+#eight {
+  grid-area: eight;
 }
-
-.read-the-docs {
-  color: #888;
+#nine {
+  grid-area: nine;
+}
+#multiply {
+  grid-area:multiply;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+#six {
+  grid-area: six;
+}
+#subtract {
+  grid-area: subtract;
+}
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three ;
+}
+#add {
+  grid-area: add;
+}
+#zero {
+  grid-area: zero;
+}
+#decimal {
+  grid-area: decimal;
+}
+#equals {
+  grid-area: equals;
 }
